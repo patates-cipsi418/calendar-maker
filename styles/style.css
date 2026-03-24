@@ -1,0 +1,112 @@
+@font-face {
+  font-family: "lucidity-condensed"; /* Name the font family */
+  src: url("/fonts/lucidity-condensed/lucidity-condensed.eot"); /* Primary URL for IE */
+  /* Fallback for other/modern browsers is critical */
+  src:
+    url("/fonts/lucidity-condensed/lucidity-condensed.woff2") format("woff2"),
+    url("/fonts/lucidity-condensed/lucidity-condensed.woff") format("woff");
+}
+
+@font-face {
+  font-family: "telegraf";
+  src: url("/fonts/telegraf/telegraf.woff") format("woff");
+}
+
+@font-face {
+  font-family: "hussar";
+  src: url("/fonts/hussar/hussar.woff") format("woff");
+}
+
+.container {
+  width: 1920px;
+  height: 1080px;
+  background-image: url("/data/background.png");
+  background-size: cover;
+  padding: 0;
+}
+.calendar-table {
+  margin: 0 0 0 150px;
+  border-spacing: 6px;
+}
+.calendar-header,
+.calendar-cell {
+  border: 2px solid;
+  border-color: rgba(225, 181, 21, 0.66);
+  height: 90px;
+  width: 170px;
+  vertical-align: top;
+  padding: 10px 10px 10px 16px;
+}
+.calendar-header {
+  background-color: rgba(225, 181, 21, 0.66);
+}
+.day-number {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 2em;
+  font-family: lucidity-condensed;
+  position: absolute;
+  color: #6ba6c4;
+}
+.event-title,
+.event-desc {
+  font-family: telegraf;
+  font-size: 0.9em;
+  color: white;
+  text-transform: uppercase;
+  text-align: left;
+}
+.event-title {
+  font-weight: bold;
+  margin: 10px 0 0 40px;
+}
+.event-desc {
+  margin: 4px 0 0 40px;
+}
+.year-title,
+.month-title,
+.calendar-header {
+  font-family: hussar;
+  color: white;
+  text-transform: uppercase;
+}
+.year-title {
+  margin: 0 20px 10px 150px;
+  display: inline-block;
+  white-space: pre;
+  font-size: 4em;
+}
+.month-title {
+  margin: 60px 20px 10px 0;
+  display: inline-block;
+  font-size: 10em;
+}
+.year-title,
+.month-title {
+  height: 160px;
+}
+.calendar-header {
+  font-size: 2.3em;
+  line-height: 90px;
+}
+.event-5a7 {
+  background-color: rgba(80, 137, 176, 0.66);
+  border-color: rgb(80, 137, 176);
+}
+.event-important,
+.event-externe {
+  background-color: rgba(170, 74, 80, 0.66);
+  border-color: rgb(170, 74, 80);
+}
+.event-fete {
+  background-color: rgba(239, 156, 61, 0.66);
+  border-color: rgb(239, 156, 61);
+}
+.calendar-image {
+  width: 960px;
+  height: 540px;
+}
+.save-button {
+  font-family: hussar;
+  display: block;
+}
