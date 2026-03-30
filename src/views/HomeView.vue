@@ -137,9 +137,9 @@ function saveAll() {
 
 <template>
   <div>
-    <a href="/public/background.png" download="background.png">background example</a>
+    <a href="/background.png" download="background.png">background example</a>
     <br />
-    <a href="/public/calendrier frat.xlsx" download="calendrier frat.xlsx">excel example</a>
+    <a href="/calendrier frat.xlsx" download="calendrier frat.xlsx">excel example</a>
   </div>
   <div>
     <input type="file" @change="handleFile" accept=".xlsx, .xls" />
