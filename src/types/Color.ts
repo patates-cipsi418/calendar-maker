@@ -1,0 +1,7 @@
+export type Color = {
+  type: string
+  r: number
+  g: number
+  b: number
+  a: number
+}

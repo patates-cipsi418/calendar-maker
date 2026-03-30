@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'lucidity-condensed'; /* Name the font family */
+  src: url('../fonts/lucidity-condensed/lucidity-condensed.eot'); /* Primary URL for IE */
+  /* Fallback for other/modern browsers is critical */
+  src:
+    url('../fonts/lucidity-condensed/lucidity-condensed.woff2') format('woff2'),
+    url('../fonts/lucidity-condensed/lucidity-condensed.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'telegraf';
+  src: url('../fonts/telegraf/telegraf.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'hussar';
+  src: url('../fonts/hussar/hussar.woff') format('woff');
+}
