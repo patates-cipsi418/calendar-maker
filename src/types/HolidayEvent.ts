@@ -28,6 +28,7 @@ export function fillHolidays(c: CalendarMonth, customHolidays: CustomHoliday[]) 
   }
 
   customHolidays.forEach((holiday) => {
+    if (holiday.month !== nc.month) return
     const existingEvent = nc.events.find(
       (event) =>
         event.eventDate.getDate() === holiday.day && event.eventDate.getMonth() === holiday.month,
