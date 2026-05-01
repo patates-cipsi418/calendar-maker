@@ -26,6 +26,7 @@ const firstDate = computed(() => new Date(props.calendarMonth.year, props.calend
 const daysInMonth = computed(() =>
   new Date(props.calendarMonth.year, props.calendarMonth.month + 1, 0).getDate(),
 )
+const weeksInMonth = computed(() => Math.ceil((firstDate.value.getDay() + daysInMonth.value) / 7))
 const emptyCells = computed(() => firstDate.value.getDay())
 
 const getColor = (eventType: string, transparent: boolean): string => {
@@ -62,11 +63,11 @@ const textColor = computed(() => getColor('text', false))
           :get-color="getColor"
         />
       </tr>
-      <tr v-for="(weak, index) in Math.ceil(daysInMonth / 7) - 1">
+      <tr v-for="(week, index) in weeksInMonth - 1">
         <Day
           v-for="(day, index) in range(
-            weak * 7 - emptyCells + 1,
-            Math.min((weak + 1) * 7 - emptyCells + 1, daysInMonth + 1),
+            week * 7 - emptyCells + 1,
+            Math.min((week + 1) * 7 - emptyCells + 1, daysInMonth + 1),
           )"
           :day="day"
           :calendar-month="calendarMonth"
@@ -76,6 +77,7 @@ const textColor = computed(() => getColor('text', false))
       </tr>
     </table>
   </div>
+  <hr />
 </template>
 
 <style scoped>
@@ -100,6 +102,9 @@ const textColor = computed(() => getColor('text', false))
 }
 .calendar-header {
   background-color: v-bind('backgroundColor');
+  font-size: 2.3em;
+  line-height: 50px;
+  height: 50px;
 }
 
 .year-title,
@@ -123,10 +128,6 @@ const textColor = computed(() => getColor('text', false))
 .year-title,
 .month-title {
   height: 160px;
-}
-.calendar-header {
-  font-size: 2.3em;
-  line-height: 90px;
 }
 .calendar-image {
   width: 960px;
